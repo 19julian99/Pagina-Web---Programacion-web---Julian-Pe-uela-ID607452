@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--
+Aca abajo empieza la etiqueta ahtml y ttenemos una etiqueta link el cual hace referencia a la hoja de estilos
+css para que la pagina se vea linda..
+-->
+
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>fixed gear bogota</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <!--
+    Aca abajo empieza el body  en el albergamos todo el codigo
+    -->
+    <body>
+        <div class="cabecera">
+            <!--
+       A contuacion tenemos  la cabecera y el titulo de la de la pagina , tenemos todo dentro de etiquetas div ya que 
+      es mas organizado y se puede manejar mas el tema de los ID para poder ponerles estilos.
+            -->
+            <h1>🌟Fixed Gear - Todo lo que debes saber sobre el piñon fijo🌟.</h1>
+
+            <!--
+        A contuacion tenemos a continuacion una imagen para insertar una imagen que es la foto de perfil
+        se tiene el atributo float para que la imagen este a un lado y deje pner texto al lado.
+            -->
+            <div class="barra-lateral"> <img id="uno" src="img/cabecera.png"/><img id="uno" src="img/compa.jpg"/><img id="uno" src="img/partes.jpg"/><img id="uno" src="img/re.jpg"/></div>
+        </div>
+        <div class="cuerpo">
+            <div class="contenido">
+                <!--
+                A continuacion hay etiquetas "h"     las cuales contienen y sirven para titulos
+                -->
+                <h1>¿Que es una bicicleta de piñon fijo?</h1>
+
+                <h2>¿Que es una bicicleta de piñon fijo?</h2>
+
+                <!--
+               A continuacion hay una etiqueta "p" que se usa para parrafos con un texto adentro
+                -->
+                <p>Una bicicle de piñon fijo es una bicicleta que muchos de sus usuarios consideran un jugueto por decirlo  asi , ya que debido a su
+                    peculiaridad en el funcionamiento llama la atencion de los jovenes de la ciudad de bogota, la bicicleta de piñon fijo a diferencia de los demas
+                    posee uñas rectas al final de la tijera del marco y el corazon de esta es una manzana con un piñon de contrarosca en el cual 
+                    el usuario puede pedalear hacia delante y hacia atras.</p>
+                <p></p>
+
+
+                <!--
+                               A continuacion hay etiquetas "h"     las cuales contienen y sirven para titulos
+                -->
+                <h2>¿Que ventajas me trae una bicileta de piñon fijo?</h2>
+                <!--
+               A continuacion hay una etiqueta "p" que se usa para parrafos con un texto adentro
+                -->
+                <p>1.Al no tener cableado para frenos ni cambio reduce la tediosa tarea del mantenimiento periodico y la pelea con los cables de estos.</p>
+                <p>2.Al no poder parar de pedalear se aumenta la resistencia de la cadencia en plano ys e fortifica los musculos en subida</p>
+                <p>3.Son mucho mas economicas que una bicicleta rutera o de montaña </p>
+                <p>4.Debido a su diseño son mas aerodinamicas </p>
+                <p>5.Hace trabajar mas los musculos de la pierna al tratar de disminuir la cadecia para frenar</p>
+                <p>...</p>
+                <!--
+                A continuacion hay una etiqueta "h" que se usa para titulos y   codigo de cuando compartimos en youtube
+                un video el nos genera el codigo de insersion en HTML
+                -->
+                <h2>¿Como frenar en una bicicleta de piñon fijo?</h2>
+                <iframe width="600" height="350" src="https://www.youtube.com/embed/axZp2lZKxXQ?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h2>ACTIVIDAD</h2>
+                <!--
+               A continuacion hay una etiqueta "p" que se usa para parrafos con un texto adentro
+                -->
+                <P>Teniendo en cuenta la  informacion anterior clasificar las siguientes imagen en el siguiente orden </P>
+                <P>1.Bicicleta de ruta. </P>
+                <P>2.Bicycleta de piñon fijo. </P>
+                <P>3.Bicicleta de montala </P>
+                <!--
+               A continuacion Tenemos codigo embebido para realizar las funciones de arrastre de las
+                imagenes de la actividad de ordenar las bicicletas, esto se aprendio en programacion web
+                -->
+                <style>
+                    #div1 {width: 300px; height: 300px; padding: 50xp; border: 1px solid #aaaaaa;}
+                    #div2 {width: 300px; height: 300px; padding: 50xp; border: 1px solid #aaaaaa;}
+                    #div3 {width: 300px; height: 300px; padding: 50xp; border: 1px solid #aaaaaa;}
+                </style>   
+
+                <script>
+                    function allowDrop(ev) {
+                        ev.preventDefault();
+                    }
+                    function drag(ev) {
+                        ev.dataTransfer.setData("text", ev.target.id);
+                    }
+                    function drop(ev) {
+                        ev.preventDefault();
+                        var data = ev.dataTransfer.getData("text");
+                        ev.target.appendChild(document.getElementById(data));
+                    }
+                </script>
+                <table border="1px" >
+                    <tr> 
+                        <!--
+                                A contuacion tenemos a continuacion una imagen para insertar una imagen que es la foto de perfil
+                                se tiene el atributo float para que la imagen este a un lado y deje pner texto al lado.
+                        -->
+                        <td><img id="im1" src="img/montaña.jpg" draggable="true" ondragstart="drag(event)" width="352" height="352"></td>
+                        <td> <img id="im1" src="img/ruta.jpg" draggable="true" ondragstart="drag(event)" width="352" height="352"></td>
+                        <td><img id="im1" src="img/fija.jpg" draggable="true" ondragstart="drag(event)" width="352" height="352"></td>
+                    </tr>
+
+                </table>
+                <!--
+               A continuacion a continuacion tenemos una tabla con los contenedores donde se guardaran las
+                imagenes que se arrastren.
+                -->
+                <table id="dos">
+                    <tr>
+                        <td> <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" ></div> </td>
+                        <td><div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" ></div> </td>
+                        <td><div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" ></div> </td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        <!--
+               A continuacion tenemos el footer con parrafos centrados para asimilar el 
+        final de la pagina web.
+        -->
+        <div class="pie">
+            <p>Julian Peñuela© ID:607452 </p>
+            <p>Programacion web </p>
+            <p>Alonso Guevara Perez</p>
+            <div class="social">
+
+                <div class="social">
+                    <!--
+                     A contuacion tenemos un div de clase social, en ella tenemos varias etiquetas 
+                     "a" con "href para hacer un abarra social con links las cuales se vinculas a un imagen"
+                    -->
+
+                    <a href="https://instagram.com/bicifixie?igshid=e9fx1f86owoy" target="_blank"><img id="iconos" src="img/insta.jpg"  ></a><a href="https://www.youtube.com/channel/UCR2SMkgyaxNfCtoPPuR2S5g" target="_blank"><img id="iconos" src="img/face.jpg"  ></a><a href="https://chat.whatsapp.com/EF3Vlzjv83N0SpenEUdVYy" target="_blank"><img id="iconos" src="img/wha.png"  ></a>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
